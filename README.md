@@ -1,43 +1,78 @@
-# Asteroid-Radar-App
+# The Shoe Store
 
+This project will consist of five screens. You don't have to create a shoe store, you can use any other item as long as you create the following screens. You will be creating:
 
-Introduction
-------------
+1. Login screen: Email and password fields and labels plus create and login buttons
+2. Welcome onboarding screen
+3. Instructions onboarding screen
+4. Shoe Listing screen
+5. Shoe Detail screen for adding a new shoe
 
-Asteroid Radar is an app to view the asteroids detected by NASA that pass near Earth, you can view all the detected asteroids in the next 7 days, their data (Size, velocity, distance to Earth and potentially hazardous or not).
+## Getting Started
 
-The app has two screens:
+Open the starter project in the latest stable version of Android Studio.
 
-1- Main screen with a list of all the detected asteroids, NASA image of day and option to choose (weekly list, today list, saved list).
+Open the starter project in Android Studio
 
-2- Details screen that displays the data of the selected asteroid.
-   
- 
-This app using the following techniques:
+##Steps
 
- - Fragments
- - Room
- - Databinding
- - Coroutines
- - Transformation map
- - Retrofit
- - Moshi converter
- - ViewModel
- - LiveData
- - Navigation Component
- - RecyclerView
- - Picasso
- - WorkManager
+1. Open the starter project in Android Studio
 
+2. Add the navigation libraries to the app build.gradle file
 
- Ps. It's the second project to submit for Udacity Advanced Android Kotlin Development Nanodegree. 
- 
- App Screenshots
- ---------------
- <p align="center">
- <img src="https://user-images.githubusercontent.com/14341736/205299963-cccfe83c-8906-4db9-aa71-827286275356.jpg" width="180" height="400">
- <img src="https://user-images.githubusercontent.com/14341736/205299985-91ea37a1-ab96-42e4-b145-fa9cfd31c234.jpg" width="180" height="400">
- <img src="https://user-images.githubusercontent.com/14341736/205299997-de9fffae-95fe-4dc4-b1ab-1d5d108f15e7.jpg" width="180" height="400">
- <img src="https://user-images.githubusercontent.com/14341736/205300005-f17db398-a294-4ff2-8c2e-98ee2582ca34.jpg" width="180" height="400">
+3. Add the safe-arg plugin to the main and app build.gradle file
 
- 
+4. Create a new navigation xml file
+
+5. Create a new Login destination.
+
+   * Include email and password labels 
+
+   - Include email and password fields
+   - Create buttons for creating a new login and logging in with an existing account
+   - Clicking either button should navigate to the Welcome Screen.
+
+6. Create a new Welcome screen destination that includes:
+
+   * A new layout
+   * At least 2 textviews
+   * A navigation button with actions to navigate to the instructions screen
+
+7. Create a new Instruction destination that includes:
+
+   * A new layout
+   * At least 2 textviews
+   * A navigation button with actions to navigate to the shoe list screen
+
+8. Create a class that extends ViewModel
+
+   *  Use a LiveData field that returns the list of shoes
+
+9. Create a new Shoe List destination that includes:
+
+   * A new layout
+   * A ScrollView
+   * A LinearLayout for Shoe Items
+   * A FloatingActionButton with an action to navigate to the shoe detail screen
+
+10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
+
+11. Create a new Shoe Detail destination that includes:
+
+    * A new layout
+    * A TextView label and EditView for the
+      * Shoe Name
+      * Company
+      * Shoe Size
+      * Description
+    * A Cancel button with an action to navigate back to the shoe list screen
+    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+
+12. Make sure you can’t go back to onboarding screens
+
+13. In the Shoe List screen:
+
+    * Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
+    * Observe the shoes variable from the ViewModel
+    * Use DataBindingUtil to inflate the shoe_list layout
+    * Add a new layout item into the scrollview for each shoe.
