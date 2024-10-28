@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="add">ADD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">logout</string>
+    <string name="login">LOGIN</string>
+    <string name="create_new">CREATE NEW</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="welcome">WELCOME</string>
+    <string name="start">START</string>
+    <string name="click_the_button_to_see_the_quick_instructions">CLick the button to see the quick instructions</string>
+    <string name="quicktips">QuickTips</string>
+    <string name="instructions"> Just click the button below no one reads the instructions nowadays</string>
+    <string name="discription">Discription</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+</resources>
